@@ -1597,3 +1597,23 @@ Processing by PostsController#index as HTML
   Rendered posts/_post.html.erb (0.1ms)
   Rendered posts/index.html.erb within layouts/application (13.7ms)
 Completed 200 OK in 55ms (Views: 41.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 108.201.186.181 at 2018-10-16 22:21:06 +0000
+Cannot render console from 108.201.186.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/8/body" for 108.201.186.181 at 2018-10-16 22:21:10 +0000
+Cannot render console from 108.201.186.181! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#body as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 0.3ms)
