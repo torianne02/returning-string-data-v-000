@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def body 
+  def body
     post = Post.find(params[:id])
     render plain: post.description
   end
